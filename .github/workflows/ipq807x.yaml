@@ -1,5 +1,7 @@
 name: Build IPQ807x
 
+on:
+  pull_request:
 
 jobs:
     build:
