@@ -1,0 +1,11 @@
+--- a/arch/arm64/mm/flush.c
++++ b/arch/arm64/mm/flush.c
+@@ -77,6 +77,8 @@ EXPORT_SYMBOL(flush_dcache_page);
+  * Additional functions defined in assembly.
+  */
+ EXPORT_SYMBOL(caches_clean_inval_pou);
++EXPORT_SYMBOL(__dma_inv_area);
++EXPORT_SYMBOL(__dma_clean_area);
+ 
+ #ifdef CONFIG_ARCH_HAS_PMEM_API
+ void arch_wb_cache_pmem(void *addr, size_t size)

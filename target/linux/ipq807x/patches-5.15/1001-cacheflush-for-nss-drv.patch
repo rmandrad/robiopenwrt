@@ -1,0 +1,26 @@
+--- a/arch/arm64/mm/cache.S
++++ b/arch/arm64/mm/cache.S
+@@ -139,8 +139,9 @@ SYM_FUNC_END(dcache_clean_pou)
+  *
+  *	- start   - kernel start address of region
+  *	- end     - kernel end address of region
+- */
+-SYM_FUNC_START_LOCAL(__dma_inv_area)
++ *
++SYM_FUNC_START_LOCAL(__dma_inv_area) */
++SYM_FUNC_START(__dma_inv_area)
+ SYM_FUNC_START_PI(dcache_inval_poc)
+ 	/* FALLTHROUGH */
+ 
+@@ -177,8 +178,9 @@ SYM_FUNC_END(__dma_inv_area)
+  *
+  *	- start   - virtual start address of region
+  *	- end     - virtual end address of region
+- */
+-SYM_FUNC_START_LOCAL(__dma_clean_area)
++ * 
++SYM_FUNC_START_LOCAL(__dma_clean_area) */
++SYM_FUNC_START(__dma_clean_area)
+ SYM_FUNC_START_PI(dcache_clean_poc)
+ 	/* FALLTHROUGH */
+ 
